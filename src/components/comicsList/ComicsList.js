@@ -16,7 +16,6 @@ const ComicsList = () => {
         if(isLogged.current){
             isLogged.current=false;
             loadComicsList();
-            console.log('comics');
         }
         // eslint-disable-next-line
     },[]);

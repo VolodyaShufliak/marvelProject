@@ -17,7 +17,6 @@ const CharList = (props) => {
         if(isLogged.current){
             isLogged.current=false;
             loadHeroesList();
-            console.log('useeffect');
         }
         // eslint-disable-next-line
     },[])

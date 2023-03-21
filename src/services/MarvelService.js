@@ -47,7 +47,7 @@ const  useMarvelService = () => {
         return {
             id:character.id,
             name:character.name,
-            description:character.description?`${character.description.slice(0,200)}...`:"Даних про цього персонажа немає",
+            description:character.description?`${character.description.slice(0,200)}...`:"There is no data about this character",
             thumbnail:`${character.thumbnail.path}.${character.thumbnail.extension}`,
             homepage:character.urls[0].url,
             wiki:character.urls[1].url,
@@ -59,25 +59,12 @@ const  useMarvelService = () => {
         return {
             id:comics.id,
             title:comics.title,
-            description:comics.description?`${comics.description.slice(0,200)}...`:"Даних про цей комікс немає",
+            description:comics.description?`${comics.description.slice(0,200)}...`:"There is no data about this comics",
             thumbnail:`${comics.thumbnail.path}.${comics.thumbnail.extension}`,
             url:comics.urls[0].url,
             price:comics.prices[0].price? `${comics.prices[0].price}$`: "not available",
             pages:comics.pageCount? `${comics.pageCount} p.`: "No information about the number of pages",
             language: comics.textObjects[0]?.language || "en-us"
-            // id: comics.id,
-			// title: comics.title,
-			// description: comics.description || "There is no description",
-			// pageCount: comics.pageCount
-			// 	? `${comics.pageCount} p.`
-			// 	: "No information about the number of pages",
-			// thumbnail: comics.thumbnail.path + "." + comics.thumbnail.extension,
-			// language: comics.textObjects[0]?.language || "en-us",
-			// // optional chaining operator
-			// price: comics.prices[0].price
-			// 	? `${comics.prices[0].price}$`
-			// 	: "not available",
-            // url:comics.urls[0].url
         };
     }
 

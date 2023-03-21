@@ -12,7 +12,6 @@ const SingleComic = () => {
     useEffect(()=>{
         if(isLogged.current){
             loadComics();
-            console.log('use');
         }
         // eslint-disable-next-line 
     },[])

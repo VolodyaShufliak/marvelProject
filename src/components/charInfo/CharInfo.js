@@ -11,7 +11,6 @@ const CharInfo = (props) => {
 
     useEffect(()=>{
         updateCharacter();
-        console.log('update');
         // eslint-disable-next-line
     },[props.selectedCharacter])
 
